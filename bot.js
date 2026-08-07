@@ -69,7 +69,7 @@ bot.on('end', () => {
 // Web sunucusu en alta, bağımsız bir şekilde eklendi (Render'ın port uyarısını kesmek için)
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 12905;
 
 app.get('/', (req, res) => {
   res.send('Bot is alive!');
