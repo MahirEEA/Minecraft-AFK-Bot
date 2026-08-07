@@ -63,4 +63,15 @@ bot.on('error', (err) => {
 });
 bot.on('end', () => {
   console.log('⛔️ Bot Disconnected!');
+
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 10000;
+
+app.get('/', (req, res) => {
+  res.send('Bot is alive!');
+});
+
+app.listen(PORT, () => {
+  console.log(`HTTP server is running on port ${PORT}`);
 });
