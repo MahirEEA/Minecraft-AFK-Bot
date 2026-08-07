@@ -61,20 +61,6 @@ function movementCycle() {
 bot.on('error', (err) => {
   console.error('⚠️ Error:', err);
 });
-
 bot.on('end', () => {
   console.log('⛔️ Bot Disconnected!');
-});
-
-// Web sunucusu en alta, bağımsız bir şekilde eklendi (Render'ın port uyarısını kesmek için)
-const express = require('express');
-const app = express();
-const PORT = process.env.PORT || 12905;
-
-app.get('/', (req, res) => {
-  res.send('Bot is alive!');
-});
-
-app.listen(PORT, () => {
-  console.log(`HTTP server is running on port ${PORT}`);
 });
